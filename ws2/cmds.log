@@ -1,0 +1,5 @@
+  201  echo ~ > ws2.txt
+  204  id alex_hovakimyan >> ws2.txt
+  206  head /proc/meminfo >> ws2.txt
+  210  cat /proc/cpuinfo >> ws2.txt
+  212  cat /etc/os-release >> ws2.txt
