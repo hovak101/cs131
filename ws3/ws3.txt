@@ -1,0 +1,11 @@
+Output of task 1: the top 3 most popular pickup locations on january 2nd, 2019: 
+num of pickups | pickup location id: 
+8605 161.0
+8407 132.0
+8163 186.0
+
+Output of task 2: the top 3 most popular pickup locations on january 10th, 2019:
+num of pickups | pickup location id:  
+13738 237.0
+13519 236.0
+12997 161.0
