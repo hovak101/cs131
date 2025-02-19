@@ -1,0 +1,12 @@
+  520  mkdir a1
+  523  touch a1.txt
+  525  vim ~/.bashrc
+  528  l >> a1.txt
+  529  w >> a1.txt
+  539  mkdir FARE
+  553  grep "151.0,239.0" ../ws3/2019-01-h1.csv | cut -d ',' -f11 > FARE/151.0-239.0.txt
+  556  grep "163.0,229.0" ../ws3/2019-01-h1.csv | cut -d ',' -f11 > FARE/163.0-229.0.txt
+  578  echo "scale=1;($(paste -s -d'+' FARE/151.0-239.0.txt))/$(wc -l FARE/151.0-239.0.txt | cut -d ' ' -f1)" | bc >> a1.txt
+  579  echo "scale=1;($(paste -s -d'+' FARE/163.0-229.0.txt))/$(wc -l FARE/163.0-229.0.txt | cut -d ' ' -f1)" | bc >> a1.txt
+  585  grep "2019-01-10" ../ws3/2019-01-h1.csv | cut -d ',' -f17 | sort -nr | head -1
+  605  grep -E '^[^,]*,[^,]*,[^,]*,[3-9][0-9]*\b' ../ws3/2019-01-h1.csv | cut -d ',' -f9 | sort | uniq -c | sort -nr | head -10 >> a1.txt
