@@ -2,24 +2,28 @@
 
 delimiter=","
 num_lines="5"
+zero_indexing="1"
+
 while [[ $# -gt 1 ]]; do
 	if [[ $1 == -d* ]]; then
 		delimiter=${1:2}
-		echo "the delimiter is ${delimiter}"
 	elif [[ $1 == -n* ]]; then
 		num_lines=${1:2}
-		echo "the number of lines is ${num_lines}"
+	elif [[ $1 == -i* ]]; then
+		zero_indexing=${1:2}
 	fi
 	shift
 done
 
 path=$1
-echo "the path is ${path}"
-# add error checking later
-
 header=$(head -n 1 ${path})
-count=1  # Start with 1 because there's always one more column than delimiters
-string="1"
+if [[ ${zero_indexing} == 0 ]]; then 
+	count=0
+	string="0"
+else
+	count=1
+	string="1"
+fi
 
 for ((i = 0; i < ${#header}; i++)); do
     if [[ "${header:$i:1}" == "$delimiter" ]]; then
@@ -27,8 +31,6 @@ for ((i = 0; i < ${#header}; i++)); do
 	string+="${delimiter}${count}"
     fi
 done
-
-echo ${string}
 
 (echo ${string}; head -n ${num_lines} ${path}) | column -t -s${delimiter} | less -S
 
