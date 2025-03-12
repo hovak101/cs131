@@ -1,10 +1,11 @@
-What This Command Does
+<h1>Beautify</h1>
+<h2>What This Command Does</h2>
 This command inputs a delimiter seperated values file(like a CSV or TBV) and outputs a more readable and labeled format for the first n entries in the file. 
 
-Why/When This Command Is Useful
+<h2>Why/When This Command Is Useful</h2>
 This command is useful when trying to determine the column numbers of a delimiter seperated values file. It's alsouseful for gauging the type of data contained in such a file. 
 
-How To Use This Command
+<h2>How To Use This Command</h2>
 The command has the following syntax: 
 
 	beautify -d<delimiter> -n<first n entries> -i<index start value> <file path>
@@ -29,7 +30,7 @@ When a flag is omitted, the following default values are used:
 	-n: 5  (first 5 values are shown)
 	-i: 1  (1-indexing
 
-Examples
+<h2>Examples</h2>
 
 	in a2 directory:
  
