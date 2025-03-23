@@ -1,0 +1,17 @@
+BEGIN { FS="," }
+
+{
+	if (NR == 1) {
+        	next
+	}
+
+	if ($17 >= 10) {
+		arr[$14]++
+	}
+}
+
+END { 
+	for (i in arr) {
+		print i, arr[i]
+	}
+}

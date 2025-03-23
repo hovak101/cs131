@@ -1,0 +1,9 @@
+ 1106  sed '/^2\.0,/!d' ../ws3/2019-01-h1.csv > vendor2.csv
+ 1110  wc vendor2.csv >> ws56.txt
+ 1115  sed -e 's/"//g' -e 's/://g' -e 's/-//g' ../ws3/2019-01-h1.csv > no-separators.csv 
+ 1118  head -10 no-separators.csv >> ws56.txt 
+ 1121  sed 's/\.[0-9]*//g' no-separators.csv > no-fractions.csv
+ 1123  head -10 no-fractions.csv >> ws56.txt 
+ 1149  awk -f awk_task_2_script ../ws3/2019-01-h1.csv >> ws56.txt
+ 1152  awk -f awk_task_2_script ../ws3/2019-01-h1.csv | sort -nr -k2,2 | head -n20 >> ws56.txt 
+ 1153  vim ws56.txt 
