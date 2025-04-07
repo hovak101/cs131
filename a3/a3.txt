@@ -1,0 +1,24 @@
+Output of example csv: 
+
+Name: Alice
+Total score: 253
+Average: 84.3333
+pass
+Name: Bob
+Total score: 246
+Average: 82
+pass
+Name: Charlie
+Total score: 270
+Average: 90
+pass
+Name: David
+Total score: 195
+Average: 65
+fail
+Name: Eve
+Total score: 265
+Average: 88.3333
+pass
+Top scorer: Charlie
+Lowest scorer: David

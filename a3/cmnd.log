@@ -1,0 +1,5 @@
+ 1267  mkdir a3
+ 1269  cd a3
+ 1271  vim grades.csv
+ 1272  vim grader.awk
+ 1282  awk -f grader.awk grades.csv > a3.txt
